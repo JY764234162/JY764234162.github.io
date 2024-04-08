@@ -832,7 +832,7 @@ JS-SDK 解决了移动⽹⻚能⼒不⾜的问题，通过暴露微信的接⼝�
         3、数据存储:localStorage、sessionStorage
         4、canvas (画布)、Geolocation (地理定位)、websocket (通信协议) 
         5、input标签新增属性:placeholder、autocomplete、autofocus、required
-        6、history APl: go、forward、back、 pushstate`},{title:"",content:""}],Uj=[{title:"Vue --- 1. Vue的基本原理",content:"当一个Vue实例创建时，Vue会遍历data中的属性，用 Object.defineProperty（vue3.0使用proxy ）将它们转为 getter/setter，并且在内部追踪相关依赖，在属性被访问和修改时通知变化。 每个组件实例都有相应的 watcher 程序实例，它会在组件渲染的过程中把属性记录为依赖，之后当依赖项的setter被调用时，会通知watcher重新计算，从而致使它关联的组件得以更新。"},{title:"Vue --- 2. 双向数据绑定的原理",content:`Vue通过Object.defineProperty()方法对数据进行劫持，监听数据的变化，并通过getter和setter方法对数据进行读写。
+        6、history APl: go、forward、back、 pushstate`}],Uj=[{title:"Vue --- 1. Vue的基本原理",content:"当一个Vue实例创建时，Vue会遍历data中的属性，用 Object.defineProperty（vue3.0使用proxy ）将它们转为 getter/setter，并且在内部追踪相关依赖，在属性被访问和修改时通知变化。 每个组件实例都有相应的 watcher 程序实例，它会在组件渲染的过程中把属性记录为依赖，之后当依赖项的setter被调用时，会通知watcher重新计算，从而致使它关联的组件得以更新。"},{title:"Vue --- 2. 双向数据绑定的原理",content:`Vue通过Object.defineProperty()方法对数据进行劫持，监听数据的变化，并通过getter和setter方法对数据进行读写。
     其次，Vue通过发布订阅模式，维护了一个订阅者数组，当数据发生变化时，Vue会通知所有订阅者进行更新。因此，当用户在页面上进行修改时，Vue会更新对应的数据，并更新所有订阅者更新视图，同时当数据发生变化时，Vue也会更新对应的视图，通过这样的机制，Vue实现了双向数据绑定，使得数据和视图的变化可以互相影响`},{title:"Vue --- 3. 使用 Object.defineProperty() 来进行数据劫持有什么缺点？",content:`
       在对一些属性进行操作时，使用这种方法无法拦截，比如通过下标方式修改数组数据或者给对象新增属性，这都不能触发组件的重新渲染，因为 Object.defineProperty 不能拦截到这些操作。更精确的来说，对于数组而言，大部分操作都是拦截不到的，只是 Vue 内部通过重写函数的方式解决了这个问题。
 
